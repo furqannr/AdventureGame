@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import inquirer from "inquirer";
 //Character health here because character health shouldn't be updated if main function is called.
 let characterHealth = 100;
@@ -54,7 +55,7 @@ function main() {
                 else if (characterHealth < 1 && healthDrinks == 0) {
                     console.log("You are too weak for battle and no drinks left");
                 }
-                else if (characterHealth < 1 && healthDrinks != 0) {
+                else if (characterHealth < 1 && healthDrinks > 0) {
                     console.log("Drink taken automatically");
                     characterHealth += 30;
                     healthDrinks += -1;
@@ -73,7 +74,6 @@ function main() {
                 console.log("Won't come here");
             }
         });
-        //return menuCh.choice;
     }
     Menu();
 }

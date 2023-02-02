@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import inquirer from "inquirer";
 //Character health here because character health shouldn't be updated if main function is called.
 let characterHealth: number = 100;
